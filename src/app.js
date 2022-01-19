@@ -42,11 +42,23 @@ let hasInexpensiveItems = items.some(item => {
     return item.price <= 100;
 });
 
-console.log(hasInexpensiveItems); // true
+// console.log(hasInexpensiveItems); // true
 
 // (6) every
 hasInexpensiveItems = items.every(item => {
     return item.price <= 100;
 });
 
-console.log(hasInexpensiveItems); // false
+// console.log(hasInexpensiveItems); // false
+
+// (7) reduce - 누적값, 현재값, 시작값(0)
+const total = items.reduce((currentTotal, item) => {
+    return item.price + currentTotal;
+}, 0);
+
+// console.log(total); // 1840
+
+// (8)
+const numbers = [1, 2, 3, 4, 5];
+const includeTwo = numbers.includes(2);
+console.log(includeTwo); // true
