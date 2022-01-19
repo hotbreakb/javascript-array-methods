@@ -8,9 +8,18 @@ const items = [
     { name: 'Keyboard', price: 25 },
 ];
 
-const filteredItems = items.filter((item) => {
+// (1) filter
+const itemsNames = items.filter((item) => {
     return item.price <= 100;
 });
 
+// console.log(items) // not changing
+// console.log(filteredItems)
+
+// (2) map - make array containing only key or value
+const itemsNames = items.map((item) => {
+    return item.name
+});
+
 console.log(items)
-console.log(filteredItems)
+console.log(itemsNames) // ["Bike", "TV", "Album", "Book", "Phone", "Computer", "Keyboard"]
