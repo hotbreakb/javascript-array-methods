@@ -34,6 +34,19 @@ const foundsNames = items.find((item) => {
 
 // (4) forEach
 items.forEach(item => {
-    console.log(item.name);
+    // console.log(item.name);
 });
 
+// (5) some
+let hasInexpensiveItems = items.some(item => {
+    return item.price <= 100;
+});
+
+console.log(hasInexpensiveItems); // true
+
+// (6) every
+hasInexpensiveItems = items.every(item => {
+    return item.price <= 100;
+});
+
+console.log(hasInexpensiveItems); // false
