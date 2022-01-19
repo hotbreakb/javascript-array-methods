@@ -9,17 +9,31 @@ const items = [
 ];
 
 // (1) filter
-const itemsNames = items.filter((item) => {
+const filteredItems = items.filter((item) => {
     return item.price <= 100;
 });
 
-// console.log(items) // not changing
-// console.log(filteredItems)
+// console.log(items); // not changing
+// console.log(filteredItems);
 
 // (2) map - make array containing only key or value
 const itemsNames = items.map((item) => {
-    return item.name
+    return item.name;
 });
 
-console.log(items)
-console.log(itemsNames) // ["Bike", "TV", "Album", "Book", "Phone", "Computer", "Keyboard"]
+// console.log(items); // not changing
+// console.log(itemsNames); // ["Bike", "TV", "Album", "Book", "Phone", "Computer", "Keyboard"]
+
+// (3) find - first item in the array which true in func
+const foundsNames = items.find((item) => {
+    return item.price <= 100;
+});
+
+// console.log(items); // not changing
+// console.log(foundsNames); // {name: "Bike", price: 100}
+
+// (4) forEach
+items.forEach(item => {
+    console.log(item.name);
+});
+
